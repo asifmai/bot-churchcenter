@@ -10,7 +10,7 @@ const run = async () => {
     await fetchLinks();
 
     if (churchesLinks.length) {
-      await pupHelper.launchBrowser({ debug: true });
+      await pupHelper.launchBrowser();
 
       await fetch();
 
