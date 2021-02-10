@@ -7,6 +7,8 @@ let churchesLinks = [];
 
 const run = async () => {
   try {
+    if (fs.existsSync('results.csv')) fs.unlinkSync('results.csv');
+
     await fetchLinks();
 
     if (churchesLinks.length) {
