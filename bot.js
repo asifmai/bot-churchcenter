@@ -66,7 +66,7 @@ const fetchChurch = (churchIdx) =>
       resolve(true);
     } catch (error) {
       if (page) await page.close();
-      console.log('fetchChurch Error: ', error);
+      console.log(`fetchChurch [${churchesLinks[churchIdx]}] Error: `, error);
       resolve(error);
     }
   });
